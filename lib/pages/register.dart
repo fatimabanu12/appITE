@@ -16,7 +16,7 @@ class _RegisterState extends State<Register> {
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/login');
           },
-          child: Text('pantalla de registrarseee'),
+          child: Text('Registrar'),
         ),
       ),
     );

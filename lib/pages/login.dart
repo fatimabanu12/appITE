@@ -19,13 +19,13 @@ class _HomePageState extends State<Login> {
               onPressed: () {
                 Navigator.pushReplacementNamed(context, '/home');
               },
-              child: Text('pantalla de iniciar sesion'),
+              child: Text('Ingresar'),
             ),
             TextButton(
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/register');
                 },
-                child: Text('registrarseee'))
+                child: Text('no tienes cuenta? registrate'))
           ],
         ),
       ),
