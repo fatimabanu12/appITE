@@ -28,7 +28,7 @@ class _Login extends State<Login> {
                 height: 50,
               ),
               CustomLoginForm(
-                  text: 'Correo elcetronico*'), //  hice uso del widget
+                  text: 'Correo electronico*'), //  hice uso del widget
               SizedBox(
                 height: 10,
               ),

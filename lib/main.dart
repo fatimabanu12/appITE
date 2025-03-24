@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ite_app/pages/home_page.dart';
 import 'package:ite_app/pages/login.dart';
 import 'package:ite_app/pages/password_page.dart';
+import 'package:ite_app/pages/password_page2.dart';
 import 'package:ite_app/pages/register.dart';
 import 'package:ite_app/pages/splash_screen.dart';
 
@@ -23,6 +24,7 @@ class MainApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/home': (context) => HomePage(),
         '/password': (context) => PasswordPage(),
+        '/password2': (context) => PasswordPage2(),
       },
     );
   }

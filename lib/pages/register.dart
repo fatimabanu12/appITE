@@ -55,51 +55,55 @@ class _RegisterState extends State<Register> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextField(
-              controller: _firstNameController,
-              decoration: InputDecoration(
-                labelText: 'Nombre',
-                errorText: _errorMessage,
-              ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          TextField(
+            controller: _firstNameController,
+            decoration: InputDecoration(
+              labelText: 'Nombre',
+              errorText: _errorMessage,
             ),
-            TextField(
-              controller: _lastNameController,
-              decoration: InputDecoration(
-                labelText: 'Apellido',
-                errorText: _errorMessage,
-              ),
+          ),
+          TextField(
+            controller: _lastNameController,
+            decoration: InputDecoration(
+              labelText: 'Apellido',
+              errorText: _errorMessage,
             ),
-            TextField(
-              controller: _emailController,
-              decoration: InputDecoration(
-                labelText: 'Correo Electrónico',
-                errorText: _errorMessage,
-              ),
+          ),
+          TextField(
+            controller: _emailController,
+            decoration: InputDecoration(
+              labelText: 'Correo Electrónico',
+              errorText: _errorMessage,
             ),
-            TextField(
-              controller: _passwordController,
-              decoration: InputDecoration(
-                labelText: 'Contraseña',
-              ),
-              obscureText: true,
+          ),
+          TextField(
+            controller: _passwordController,
+            decoration: InputDecoration(
+              labelText: 'Contraseña',
             ),
-            TextField(
-              controller: _controlNumberController,
-              decoration: InputDecoration(
-                labelText: 'Número de Control',
-                errorText: _errorMessage,
-              ),
+            obscureText: true,
+          ),
+          TextField(
+            controller: _controlNumberController,
+            decoration: InputDecoration(
+              labelText: 'Número de Control',
+              errorText: _errorMessage,
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _register,
-              child: Text('Registrar'),
-            ),
-          ],
-        ),
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: _register,
+            style: ElevatedButton.styleFrom(
+                //darle forma al boton y no se quede con lo que viene por defecto
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                padding: EdgeInsets.symmetric(horizontal: 160, vertical: 10)),
+            child: Text('Registrar'),
+          )
+        ]),
       ),
     );
   }
