@@ -20,6 +20,14 @@ class _HomePageState extends State<SplashScreen> {
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/login');
                 },
+                style: ElevatedButton.styleFrom(
+                    //darle forma al boton y no se quede con lo que viene por defecto
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 100, vertical: 10)),
                 child: Text('Iniciar sesion')),
           ],
         ),
