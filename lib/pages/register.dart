@@ -46,6 +46,13 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios)),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -86,7 +93,6 @@ class _RegisterState extends State<Register> {
                 errorText: _errorMessage,
               ),
             ),
-            
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _register,
