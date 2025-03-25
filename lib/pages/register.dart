@@ -14,7 +14,6 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  String? _errorMessage;
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _controlNumberController = TextEditingController();
@@ -81,13 +80,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.arrow_back_ios)),
-      ),
+      backgroundColor: AppColors.background,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -121,47 +114,7 @@ class _RegisterState extends State<Register> {
                 ),
             ],
           ),
-          TextField(
-            controller: _lastNameController,
-            decoration: InputDecoration(
-              labelText: 'Apellido',
-              errorText: _errorMessage,
-            ),
-          ),
-          TextField(
-            controller: _emailController,
-            decoration: InputDecoration(
-              labelText: 'Correo Electrónico',
-              errorText: _errorMessage,
-            ),
-          ),
-          TextField(
-            controller: _passwordController,
-            decoration: InputDecoration(
-              labelText: 'Contraseña',
-            ),
-            obscureText: true,
-          ),
-          TextField(
-            controller: _controlNumberController,
-            decoration: InputDecoration(
-              labelText: 'Número de Control',
-              errorText: _errorMessage,
-            ),
-          ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: _register,
-            style: ElevatedButton.styleFrom(
-                //darle forma al boton y no se quede con lo que viene por defecto
-                backgroundColor: Color(0xff2b3a67),
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15)),
-                padding: EdgeInsets.symmetric(horizontal: 160, vertical: 10)),
-            child: Text('Registrar'),
-          )
-        ]),
+        ),
       ),
     );
   }
