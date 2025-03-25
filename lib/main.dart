@@ -5,8 +5,14 @@ import 'package:ite_app/pages/password_page.dart';
 import 'package:ite_app/pages/password_page2.dart';
 import 'package:ite_app/pages/register.dart';
 import 'package:ite_app/pages/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main()async {
+   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MainApp());
 }
 

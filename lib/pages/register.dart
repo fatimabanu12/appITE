@@ -141,34 +141,33 @@ class _RegisterState extends State<Register> {
   }
 
   Widget _buildDropdown() {
-    return DropdownButtonFormField<String>(
-      value: _selectedProgram,
-      hint: Text('Seleccione una carrera', style: TextStyle(color: AppColors.primary)),
-      onChanged: (String? newValue) {
-        setState(() {
-          _selectedProgram = newValue;
-        });
-      },
-      items: _programs.map<DropdownMenuItem<String>>((String program) {
-        return DropdownMenuItem<String>(
-          value: program,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
-            child: Text(program, style: TextStyle(color: AppColors.primary)),
-          ),
-        );
-      }).toList(),
-      isExpanded: true,
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: AppColors.background,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: AppColors.primary),
-        ),
+  return DropdownButtonFormField<String>(
+    value: _selectedProgram, // Se asegura de que el valor seleccionado sea visible
+    onChanged: (String? newValue) {
+      setState(() {
+        _selectedProgram = newValue; // Actualiza el estado con la nueva selección
+      });
+    },
+    items: _programs.map<DropdownMenuItem<String>>((String program) {
+      return DropdownMenuItem<String>(
+        value: program,
+        child: Text(program, style: TextStyle(color: AppColors.primary)),
+      );
+    }).toList(),
+    isExpanded: true,
+    decoration: InputDecoration(
+      labelText: 'Seleccione una carrera', // Se usa labelText en lugar de hint
+      labelStyle: TextStyle(color: AppColors.primary),
+      filled: true,
+      fillColor: AppColors.background,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: BorderSide(color: AppColors.primary),
       ),
-    );
-  }
+    ),
+  );
+}
+
 
   Widget _buildRegisterButton() {
     return ElevatedButton(
