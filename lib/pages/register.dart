@@ -96,7 +96,7 @@ class _RegisterState extends State<Register> {
             onPressed: _register,
             style: ElevatedButton.styleFrom(
                 //darle forma al boton y no se quede con lo que viene por defecto
-                backgroundColor: Colors.blue,
+                backgroundColor: Color(0xff2b3a67),
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15)),

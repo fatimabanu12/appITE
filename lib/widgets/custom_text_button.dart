@@ -13,14 +13,15 @@ class CustomTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-        alignment: aligment,
-        child: Container(
-            margin: EdgeInsets.only(right: 30),
-            child: TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, route);
-              },
-              child: Text(text),
-            )));
+      alignment: aligment,
+      child: Container(
+        margin: EdgeInsets.only(right: 30),
+        child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, route);
+            },
+            child: Text(text, style: TextStyle(color: Color(0xffd8c495)))),
+      ),
+    );
   }
 }

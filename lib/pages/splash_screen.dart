@@ -11,6 +11,7 @@ class _HomePageState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff2f6f7),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,7 +23,7 @@ class _HomePageState extends State<SplashScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                     //darle forma al boton y no se quede con lo que viene por defecto
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Color(0xff2b3a67),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
